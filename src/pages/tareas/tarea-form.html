@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>{{ titulo }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item>
+            <ion-label floating>Titulo</ion-label>
+            <ion-input type="text"
+            name="Titulo"
+            [(ngModel)]="tarea.titulo"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>Descripcion</ion-label>
+            <ion-input type="text"
+            name="Descripcion"
+            [(ngModel)]="tarea.descripcion"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>FechaInicio</ion-label>
+            <ion-datetime displayFormat="YYYY MMM  DD" [(ngModel)]="tarea.fechaInicio"></ion-datetime>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>FechaFinal</ion-label>
+            <ion-datetime displayFormat="YYYY MMM  DD" [(ngModel)]="tarea.fechaFinal"></ion-datetime>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>Estado</ion-label>
+            <ion-input type="text"
+            name="Estado"
+            [(ngModel)]="tarea.estado"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <button ion-button full color="primary"
+        (click)="guardar()">
+        Guardar
+      </button>
+    </ion-row>
+  </ion-grid>
+</ion-content>
