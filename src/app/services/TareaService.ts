@@ -41,8 +41,9 @@ export class TareaService {
   }
 
   public editarTarea(tarea:any) {
+    console.log(tarea)
     let uri = `${this.url}/${tarea.idTarea}`;
-
+    console.log(uri)
     let data = JSON.stringify(tarea);
 
     return this.http.put(uri, data, { headers: this.headers })
